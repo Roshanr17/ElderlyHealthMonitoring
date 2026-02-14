@@ -1,9 +1,10 @@
 import streamlit as st
 import pickle
 import numpy as np
+import os
 
-# Load trained model
-model = pickle.load(open("model.pkl", "rb"))
+model_path = os.path.join(os.path.dirname(__file__), "model.pkl")
+model = pickle.load(open(model_path, "rb"))
 
 st.title("Elderly Health Monitoring System")
 
